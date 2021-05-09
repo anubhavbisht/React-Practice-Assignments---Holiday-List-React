@@ -44,7 +44,7 @@ class App extends Component {
           {this.cityList.map((item) =>
             item.country == "India" ? (
               <li key={`location${(this.count = this.count + 1)}`}>
-                {item.name}
+                {item.name}({item.country})
               </li>
             ) : null
           )}

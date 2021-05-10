@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <ol key="cityList">
+        <ol>
           {this.cityList.map((item) =>
             item.country == "India" ? (
               <li key={`location${(this.count = this.count + 1)}`}>

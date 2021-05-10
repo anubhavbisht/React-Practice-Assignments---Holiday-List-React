@@ -17,7 +17,7 @@ class App extends Component {
       { name: "Museum Island", country: "Germany" },
       { name: "Munnar", country: "India" },
       { name: "Leh Ladakh", country: "India" },
-      { name: "Goa", country: "India" },
+
       { name: "Agra", country: "India" },
       { name: "Dalhousie", country: "India" },
       { name: "Coorg", country: "India" },
@@ -38,11 +38,12 @@ class App extends Component {
   }
 
   render() {
+    const cities = ["Goa", "Darjeeling", "Lonavala"];
     return (
       <div id="main">
         <ol type="1">
           {this.cityList.map((item) =>
-            item.country == "India" ? (
+            cities.includes(item.name) ? (
               <li key={`location${(this.count = this.count + 1)}`}>
                 {item.name}
               </li>
